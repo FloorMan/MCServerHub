@@ -23,6 +23,16 @@ app.get("/api", (req, res) => { // Define a GET route
     res.json({ message: ["Hello from the server!", "Next Message!"] }); // Key-value pair in JSON format
 });
 
+
+app.get("/api/ip", (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Max-Age", "1800");
+    res.setHeader("Access-Control-Allow-Headers", "content-type");
+    res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" );
+    res.json({ ip: "22.ip.gl.ply.gg:44710" }); // Key-value pair in JSON format
+})
+
 // Start the server on port 8080
 app.listen(8080, () => {
     console.log("Server is running on port 8080"); // Log message when server starts

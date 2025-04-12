@@ -1,13 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minecraft Server Status</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌍 Minecraft Server</h1>
+    <p class="ip-label">Current IP:</p>
+    <div class="ip-box" id="ip">Loading...</div>
+
+    <div class="features">
+      <h2>🔧 Features</h2>
+      <ul>
+        <li> &emsp; Java 1.21.5!</li>
+        <li>  &emsp;Kill Yourself!</li>
+        <li>  &emsp;No whitelist - join anytime!</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Optional: Replace with your Express endpoint or fetch logic
+    fetch('http://localhost:8080/api/ip')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('ip').textContent = data.ip || "Unavailable";
+      })
+      .catch(() => {
+        document.getElementById('ip').textContent = "Error fetching IP";
+      });
+  </script>
+</body>
 </html>
