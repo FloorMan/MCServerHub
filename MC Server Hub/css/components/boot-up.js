@@ -43,7 +43,7 @@ return new Promise(resolve => {
 }
 
 function fetchIP() {
-fetch('/api/ip')
+fetch('local:8080/api/ip')
     .then(res => res.json())
     .then(data => {
     document.getElementById('ip-box').textContent = data.ip || "Unavailable";
