@@ -76,7 +76,7 @@ app.get("api/checkstatus", (req, res) => { // Define a GET route to check the st
             res.status(500).json({ error: 'Failed to start server' }); // Send error response if server failed to start
         }
     });
-}
+});
 
 
 app.post("/api/changeip", (req, res) => { // Define a POST route to change the IP address in the .env file
