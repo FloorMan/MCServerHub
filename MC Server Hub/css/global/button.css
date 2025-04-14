@@ -1,0 +1,31 @@
+/* Creates the style for every button on the page */
+.button {
+    display: inline-block;
+    font-size: var(--fs-7);
+    line-height: 1.5;
+    font-weight: 700;
+    padding: 10.5px 24px; /**Sets button padding to 10.5 height, 24 width */
+    border-radius: 28px;
+    transition: 150ms ease-in-out;/** Transition time for hover*/
+    transition-property: background, opacity;
+}
+
+/** Specific styles for .button.dark */
+.button.dark {
+    background: var(--color-blue-900);
+    color: var(--color-white);
+}
+
+.button.dark:hover{
+    background: var(--color-blue-600);
+}
+
+/** Specific styles for .button.pink */
+.button.pink {
+    background: var(--gradient-pink);
+    color: var(--color-white);
+}
+
+.button.pink:hover{
+    opacity: 0.5;
+}

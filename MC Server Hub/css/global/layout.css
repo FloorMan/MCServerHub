@@ -1,0 +1,17 @@
+/* Helper class to help the layout and padding for smaller devices */
+.wrapper {
+    margin: 0 auto;
+}
+
+@media (width >= 50.625em) { /** Tablet */
+    .wrapper {
+        padding-inline: 44px;
+    }
+}
+
+@media (width >= 75em) { /** Mobile */
+    .wrapper {
+        max-width: 75em;
+        padding-inline: 0;
+    }
+}

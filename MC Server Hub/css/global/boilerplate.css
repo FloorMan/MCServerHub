@@ -1,0 +1,61 @@
+:root { /* Used for CSS Custom properties and other things*/
+    --color-blue-900: hsl(233, 54%, 16%);
+    --color-blue-600: hsl(234, 25%, 52%); /** HSL controls hue, saturation, light */
+    --color-pink-600: hsl(341, 92%, 64%); /** The -- defines a CSS Custom Property, so we can use these later in the sheet */
+    --color-pink-300: hsl(341, 100%, 83%);
+    --color-grey: hsl(232, 10%, 56%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-black: hsl(0, 0%, 5%);
+    --gradient-pink: linear-gradient(hsl(13, 100%, 64%),hsl(322, 87%, 55%));
+    --gradient-purple: linear-gradient(hsl(322, 87%, 55%), hsl(237, 100%, 64%));
+    --gradient-black: linear-gradient(var(--color-black),var(--color-blue-900),var(--color-black))
+    
+}
+
+
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--color-black);
+}
+
+
+body {
+    font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; /* Font stack, Plus Jakarta Sans was imported from Google fonts helper, defined in fonts.css*/
+    font-weight: 400;
+    margin: 0;
+    background: linear-gradient(to bottom, transparent, var(--color-black)), url("../../assets/minecraft_sky_stars_night_4k_hd-3840x2160.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1, 
+h2, 
+h3 {
+    line-height: 1.2;
+    font-weight: 800;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: var(--color-grey);
+    line-height: 1.5;
+}
+
+
+
+img {
+    display: flex; /* Keeps images from having space*/
+    width: 100%;
+    height: auto; /* maintains correct ratio w:h*/
+}

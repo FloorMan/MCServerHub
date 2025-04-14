@@ -1,0 +1,7 @@
+@import url("./global/boilerplate.css");/* @import Lets us import style rules from other sheets */
+@import url("./global/fonts.css");/* Loads the fonts */
+@import url("./global/button.css");/* Loads the button styles */
+@import url("./global/layout.css");/* Loads the layout styles */
+@import url("./components/header.css");/* Loads the header */
+@import url("./components/hero.css");
+@import url("./components/main.css");

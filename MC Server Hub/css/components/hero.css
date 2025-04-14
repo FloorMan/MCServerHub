@@ -1,0 +1,14 @@
+.hero h1 {
+    font-size: var(--fs-1);
+    color: var(--color-white);
+    padding-top: 50px;
+}
+
+.hero p {
+    margin-block: 24px 40px;
+}
+
+.hero p span {
+    color: yellow;
+    font-weight: 800;
+}

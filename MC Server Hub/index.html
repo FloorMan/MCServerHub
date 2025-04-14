@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Minecraft Server Status</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>MC Server Hub</title>
 </head>
 <body>
-  <div class="container">
-    <h1>🌍 Minecraft Server</h1>
-    <p class="ip-label">Current IP:</p>
-    <div class="ip-box" id="ip">Loading...</div>
+    <header class="header">
+        <a href="/" >
+            <img class="logo" src="./assets/GZAwtc.jpg"
+            alt="Logo! GZA from Wu Tang" width="111" height="28"/>
+        </a>
+        <a href="" class="button dark">
+            BESTAGONS
+        </a>
+    </header>
 
-    <div class="features">
-      <h2>🔧 Features</h2>
-      <ul>
-        <li> &emsp; Java 1.21.5!</li>
-        <li>  &emsp;Kill Yourself!</li>
-        <li>  &emsp;No whitelist - join anytime!</li>
-      </ul>
-    </div>
-  </div>
+    <main>
+        <!-- The hero splash logo -->
+        <section class="row">
+            <section class="hero">  
+                <div class="hero__text ">
+                    <h1>THE BEST SERVER ON UCF</h1>
+                    <p>
+                        Our super cool modern server runs on <span>1.21.5</span>
+                    </p>
+                    
+                    <a href="https://discord.gg/zJ9DD92Em3" class="button pink">TAKE ME TO THE DISCORD!</a>
+                </div>
 
-  <script>
-    // Optional: Replace with your Express endpoint or fetch logic
-    fetch('http://localhost:8080/api/ip')
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('ip').textContent = data.ip || "Unavailable";
-      })
-      .catch(() => {
-        document.getElementById('ip').textContent = "Error fetching IP";
-      });
-  </script>
+            </section>
+
+            <!-- We are going to use flex boxes to make a grid layout -->
+            <div class="terminal-box">
+                <pre id="boot-sequence" class="boot-text"></pre>
+            
+                <div id="ip-section" class="hidden">
+                <p class="label">> Current IP Address:</p>
+                <div class="ip-display">
+                    <span id="ip-box">loading...</span>
+                    <button id="copy-btn">COPY</button>
+                </div>
+                <p class="status" id="status-msg"></p>
+                </div>
+            </div>
+        </section>
+        <script src="./css/components/boot-up.js"></script>
+    </main>
 </body>
 </html>
