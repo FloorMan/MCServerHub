@@ -51,7 +51,7 @@ app.get("/api/ip", (req, res) => {
     res.json({ ip: MINECRAFT_SERVER }); // Key-value pair in JSON format
 })
 
-app.get("api/checkstatus", (req, res) => { // Define a GET route to check the status of the Minecraft server
+app.get("/api/checkstatus", (req, res) => { // Define a GET route to check the status of the Minecraft server
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Credentials", "true");
     res.setHeader("Access-Control-Max-Age", "1800");
